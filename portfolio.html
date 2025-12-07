@@ -12,6 +12,11 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer>
   </script>
   <link rel="stylesheet" href="css/style.css">
+  <script src="./js/script.js" defer></script>
+  <script src="./js/map.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="./css/map.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
@@ -25,13 +30,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 column-gap-4 h6 small">
           <li class="nav-item">
-            <a class="nav-link text-light-emphasis" href="./index.html">home</a>
+            <a class="nav-link text-light-emphasis text-uppercase fw-bolder pt-3" href="./index.html">home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./portfolio.html">portfolio</a>
+            <a class="nav-link active text-uppercase fw-bolder pt-3" aria-current="page" href="./portfolio.html">portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light-emphasis" href="./contact.html">contact</a>
+            <a class="nav-link text-light-emphasis text-uppercase fw-bolder pt-3" href="./contact.html">contact</a>
           </li>
         </ul>
       </div>
@@ -40,58 +45,58 @@
   <div class="container">
     <div class="row">
       <main class="col-md-9">
-        <h1 class="fs-1 text-white text-center my-5">Portfolio</h1><br>
+        <h1 class="fs-1 text-white text-center my-5">Projecten</h1><br>
         <section class="row">
           <article class="col-12 col-sm-6 col-md-4">
-            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">Project 1</h2>
-            <a href="./naam.html">
+            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">Scripting</h2>
+            <a href="./scripting.html">
               <figure class="figure">
-                <img src="./assets/images/vraagteken.png" class="figure-img img-fluid" alt="foto van ?" title="?">
+                <img src="./assets/images/scriptingAI.webp" class="figure-img img-fluid" alt="foto van scripting" title="scripting">
               </figure>
             </a>
           </article>
           
           <article class="col-12 col-sm-6 col-md-4">
-            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">Project 2</h2>
-            <a href="./naam.html">
+            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">webtechnologie</h2>
+            <a href="./webtechnologie.html">
               <figure class="figure">
-                <img src="./assets/images/vraagteken.png" class="figure-img img-fluid" alt="foto van ?" title="?">
+                <img src="./assets/images/webtechnologieAI.webp" class="figure-img img-fluid" alt="foto van webtechnologie" title="webtechnologie">
               </figure>
             </a>
           </article>
           
           <article class="col-12 col-sm-6 col-md-4">
-            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">Project 3</h2>
-            <a href="./naam.html">
+            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">serverbeheer</h2>
+            <a href="./serverbeheer.html">
               <figure class="figure">
-                <img src="./assets/images/vraagteken.png" class="figure-img img-fluid" alt="foto van ?" title="?">
+                <img src="./assets/images/serverbeheerAI.webp" class="figure-img img-fluid" alt="foto van serverbeheer" title="serverbeheer">
               </figure>
             </a>
           </article>
           
           <article class="col-12 col-sm-6 col-md-4">
-            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">Project 4</h2>
-            <a href="./naam.html">
+            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">datacom & netwerken</h2>
+            <a href="./datacom.html">
               <figure class="figure">
-                <img src="./assets/images/vraagteken.png" class="figure-img img-fluid" alt="foto van ?" title="?">
+                <img src="./assets/images/datacomAI.webp" class="figure-img img-fluid" alt="foto van datacom" title="datacom">
               </figure>
             </a>
           </article>
           
           <article class="col-12 col-sm-6 col-md-4">
-            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">Project 5</h2>
-            <a href="./naam.html">
+            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">besturingssystemen</h2>
+            <a href="./besturingssystemen.html">
               <figure class="figure">
-                <img src="./assets/images/vraagteken.png" class="figure-img img-fluid" alt="foto van ?" title="?">
+                <img src="./assets/images/besturingssystemenAI.webp" class="figure-img img-fluid" alt="foto van besturingssystemen" title="besturingssystemen">
               </figure>
             </a>
           </article>
           
           <article class="col-12 col-sm-6 col-md-4">
-            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">Project 6</h2>
-            <a href="./naam.html">
+            <h2 class="text-uppercase fs-6 fw-bolder pt-3 text-white">learn@work explore</h2>
+            <a href="./learnatwork.html">
               <figure class="figure">
-                <img src="./assets/images/vraagteken.png" class="figure-img img-fluid" alt="foto van ?" title="?">
+                <img src="./assets/images/learnatworkAI.webp" class="figure-img img-fluid" alt="foto van learn at work" title="learn at work">
               </figure>
             </a>
           </article>
@@ -101,11 +106,14 @@
         <h2 class="text-uppercase fs-5 fw-bolder pt-3 text-light">contact</h2>
         <p class="text-nowrap mb-2"><i class="me-2 bi bi-envelope text-primary"></i> ilyasgazali1@gmail.com<br>
         <i class="bi bi-telephone text-primary"></i> +32 489 14 50 72</p>
+        <section id="map" class="row my-5">
+          <div id="mijnMap" class="col-12 mb-3"></div>
+        </section>
       </aside>
     </div>
   </div>
   <hr>
-  <footer class="container-fluid text-center h6 small p-4 text-white">&copy; 2025 Ilyas Gazali | AP Hogeschool SNB</footer>
+  <footer class="container-fluid text-center h6 small p-4 text-white">&copy; <span id="year"></span> Ilyas Gazali</footer>
 </body>
 
 </html>

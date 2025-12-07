@@ -26,3 +26,7 @@ hr {
 span {
     color: red;
 }
+
+footer > span {
+    color: white;
+}

@@ -12,6 +12,11 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer>
   </script>
   <link rel="stylesheet" href="css/style.css">
+  <script src="./js/script.js" defer></script>
+  <script src="./js/map.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="./css/map.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
@@ -25,13 +30,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 column-gap-4 h6 small">
           <li class="nav-item">
-            <a class="nav-link text-light-emphasis" href="./index.html">home</a>
+            <a class="nav-link text-light-emphasis text-uppercase fw-bolder pt-3" href="./index.html">home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light-emphasis" href="./portfolio.html">portfolio</a>
+            <a class="nav-link text-light-emphasis text-uppercase fw-bolder pt-3" href="./portfolio.html">portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./contact.html">contact</a>
+            <a class="nav-link active text-uppercase fw-bolder pt-3" aria-current="page" href="./contact.html">contact</a>
           </li>
         </ul>
       </div>
@@ -48,7 +53,7 @@
             </p>
           </article>
           <hr>
-          <form action="#" method="POST">
+          <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
             <fieldset class="row g-3 mb-3">
               <legend class="text-uppercase fs-6 fw-bolder pt-3">gegevens</legend>
               <div class="col-md-6 col-sm-12">
@@ -64,11 +69,11 @@
                 <input class="form-control" type="email" name="e-mail" required>
               </div>
               <div class="col-12">
-              <label class="form-label" for="e-mail">Bericht <span>*</span></label>
-              <input class="col-12 form-control" type="email" name="e-mail" placeholder="Onderwerp" required>
+              <label class="form-label" for="onderwerp">Onderwerp <span>*</span></label>
+              <input class="col-12 form-control" type="text" name="onderwerp" placeholder="Onderwerp" required>
               </div>
-              <div class="col-12 my-0">
-              <label class="form-label" for="bericht"></label>
+              <div class="col-12 my-3">
+              <label class="form-label" for="bericht">Bericht <span>*</span></label>
               <textarea name="bericht" id="bericht" class="form-control" rows="5" placeholder="Tekst" required></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Versturen</button>
@@ -78,13 +83,15 @@
       </main>
       <aside class="col-md-3 border-start ps-5 text-white">
         <h2 class="text-uppercase fs-5 fw-bolder pt-3 text-light">contact</h2>
-
         <p class="text-nowrap mb-2"><i class="me-2 bi bi-envelope text-primary"></i> ilyasgazali1@gmail.com<br>
         <i class="bi bi-telephone text-primary"></i> +32 489 14 50 72</p>
+        <section id="map" class="row my-5">
+          <div id="mijnMap" class="col-12 mb-3"></div>
+        </section>
       </aside>
     </div>
   </div>
-  <footer class="container-fluid text-center h6 small p-4 text-white">&copy; 2025 Ilyas Gazali | AP Hogeschool SNB</footer>
+  <footer class="container-fluid text-center h6 small p-4 text-white">&copy; <span id="year"></span> Ilyas Gazali</footer>
 </body>
 
 </html>

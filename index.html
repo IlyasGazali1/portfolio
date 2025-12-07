@@ -12,6 +12,11 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer>
   </script>
   <link rel="stylesheet" href="css/style.css">
+  <script src="./js/script.js" defer></script>
+  <script src="./js/map.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="./css/map.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
@@ -25,13 +30,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 column-gap-4 h6 small">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./index.html">home</a>
+            <a class="nav-link active text-uppercase fw-bolder pt-3" aria-current="page" href="./index.html">home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light-emphasis" href="./portfolio.html">portfolio</a>
+            <a class="nav-link text-light-emphasis text-uppercase fw-bolder pt-3" href="./portfolio.html">portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light-emphasis" href="./contact.html">contact</a>
+            <a class="nav-link text-light-emphasis text-uppercase fw-bolder pt-3" href="./contact.html">contact</a>
           </li>
         </ul>
       </div>
@@ -40,7 +45,16 @@
   <div class="container">
     <div class="row">
       <main class="col-md-9">
-        <h1 class="fs-1 text-white text-center my-5">Welkom op mijn web</h1><br>
+        <h1 class="fs-1 text-white text-center my-5">Portfolio Ilyas Gazali</h1><br>
+        <div class="row container my-5">
+          <figure class="col-md-2 mb-2 mb-md-0 text-center">
+            <img class="rounded img-fluid" src="./assets/images/professionele foto.jpg" alt="Foto van Ilyas Gazali" width="120px">
+          </figure>
+          <p class="text-light small col-md-10 text-white text-center">
+            Ik ben Ilyas Gazali, een gedreven eerstejaarsstudent Systemen- en Netwerkbeheer aan de AP hogeschool. <br class="mb-3"> Mijn studie vormt het startpunt waarin ik een grondige, praktische basis ontwikkel in kerngebieden als IT-infrastructuur, besturingssystemen en diverse programeertalen. <br class="mb-3"> Parallel aan deze technische scholing volg ik het vak Learn@Work Explore dat mijn professionele en persoonlijke ontwikkeling centraal stelt. <br class="mb-3">Hierin werk ik actief aan mijn soft- en hard-skills en oriëntatie op de arbeidsmarkt, zodat ik straks niet alleen technisch onderlegd, maar ook goed voorbereid ben op de samenwerking en uitdagingen in een professionele omgeving.
+          </p>
+        </div>
+        <hr>
         <div id="carousel" class="carousel slide container">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -67,25 +81,19 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <div class="row container my-5">
-          <figure class="col-md-2 mb-2 mb-md-0">
-            <img class="rounded img-fluid" src="./assets/images/professionele foto.jpg" alt="Foto van Ilyas Gazali" width="120px">
-          </figure>
-          <p class="text-light small col-md-10">Mijn naam is Ilyas Gazali. Als eerstejaarsstudent Systemen- en Netwerkbeheer aan de AP Hogeschool (2025-2026)
-           leer ik actief een stevige basis op in IT-fundamenten zoals besturingssystemen en allerlei soorten programmeertalen.
-           Daarnaast leer ik mijn professionele soft skills via het OLOD Learn@Work Explore,
-            een vak dat is gericht op persoonlijke groei en voorbereiding op de arbeidsmarkt.</p>
-        </div>
       </main>
       <aside class="col-md-3 border-start ps-5 text-white">
         <h2 class="text-uppercase fs-5 fw-bolder pt-3 text-light">Contact</h2>
         <p class="text-nowrap mb-2"><i class="me-2 bi bi-envelope text-primary"></i> ilyasgazali1@gmail.com<br>
         <i class="bi bi-telephone text-primary"></i> +32 489 14 50 72</p>
+        <section id="map" class="row my-5">
+          <div id="mijnMap" class="col-12 mb-3"></div>
+        </section>
       </aside>
     </div>
   </div>
   <hr>
-  <footer class="container-fluid text-center h6 small p-4 text-white">&copy; 2025 Ilyas Gazali | AP Hogeschool SNB</footer>
+  <footer class="container-fluid text-center h6 small p-4 text-white">&copy; <span id="year"></span> Ilyas Gazali</footer>
 </body>
 
 

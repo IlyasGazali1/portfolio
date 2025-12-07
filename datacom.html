@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datacom</title>
+  <link rel="stylesheet" href="css/reset.css">  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer>
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./js/script.js" defer></script>
+  <script src="./js/map.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="./css/map.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html"><img src="./assets/images/logo.png" alt="Logo Ilyas Gazali" width="150" height="150"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 column-gap-4 h6 small">
+          <li class="nav-item">
+            <a class="nav-link text-light-emphasis text-uppercase fw-bolder pt-3" href="./index.html">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-uppercase fw-bolder pt-3" aria-current="page" href="./portfolio.html">portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light-emphasis text-uppercase fw-bolder pt-3" href="./contact.html">contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <main class="col-md-9">
+          <a role="button" class="btn btn-primary text-nowrap" href="./portfolio.html" aria-label="Terug">Terug</a>
+        <h1 class="fs-1 text-white text-center my-5">Datacom & Netwerken</h1>
+        <section class="row">
+          <figure class="figure col-md-6 col-12">
+            <img src="./assets/images/datacomAI.webp" class="figure-img" alt="Foto vraagteken" width="400px">
+            <figcaption class="figure-caption text-white">Datacom & Netwerken</figcaption>
+          </figure>
+          <section class="col-md-6 col-12">
+            <p class="text-white">In Datacom & Netwerken hebben we geleerd hoe communicatie tussen netwerken werkelijk werken.</p>
+            <ul class="text-white mt-5">
+              <li class="mb-2">IPv4</li>
+              <li class="mb-2">IPv6</li>
+              <li class="mb-2">Protocols</li>
+            </ul>
+          </section>
+        </section>
+      </main>
+      <aside class="col-md-3 border-start ps-5 text-white">
+        <h2 class="text-uppercase fs-5 fw-bolder pt-3 text-light">contact</h2>
+        <p class="text-nowrap mb-2"><i class="me-2 bi bi-envelope text-primary"></i> ilyasgazali1@gmail.com<br>
+        <i class="bi bi-telephone text-primary"></i> +32 489 14 50 72</p>
+        <section id="map" class="row my-5">
+          <div id="mijnMap" class="col-12 mb-3"></div>
+        </section>
+      </aside>
+    </div>
+  </div>
+  <hr>
+  <footer class="container-fluid text-center h6 small p-4 text-white">&copy; <span id="year"></span> Ilyas Gazali</footer>
+</body>
+
+</html>
